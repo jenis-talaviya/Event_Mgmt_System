@@ -7,43 +7,6 @@ from datetime import datetime,timedelta
 from src.schemas.userschemas import OtpRequest
 from src.models.userdetail import OTPDetail
 
-# Jeni$@ 3178
-# zgho imvl npze rzkv
-
-#ova game
-#game pc iso
-
-# Email configuration
-# sender_email = "jenistalaviya404@gmail.com"
-# receiver_email = "jenistalaviya3178@gmail.com"
-# password = "zghoimvlnpzerzkv"
-# subject = "Your OTP Code"
-# otp = str(random.randint(100000,999999))
-# message_text = f"Your OTP is {otp} which is valid for 1 minute"
-
-
-# # Create the email message
-# message = MIMEMultipart()
-# message["From"] = sender_email
-# message["To"] = receiver_email
-# message["Subject"] = subject
-
-# # Attach the message text
-# message.attach(MIMEText(message_text, "plain"))
-
-
-# # Send the email
-# try:
-#     server = smtplib.SMTP("smtp.gmail.com", 587)
-#     server.starttls()
-#     server.login(sender_email, password)
-#     server.sendmail(sender_email, receiver_email, message.as_string())
-#     print("Mail sent successfully")
-#     server.quit()
-# except Exception as e:
-#     print(f"Failed to send email: {e}")
-    
-    
 #--------------------------------------------------------------------------------
 
 

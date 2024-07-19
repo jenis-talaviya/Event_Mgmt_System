@@ -8,7 +8,7 @@ from passlib.context import CryptContext
 from src.utils.usertoken import decode_token_password,decode_token_user_email,decode_token_user_id,get_token
 from src.utils.otp import generate_otp,send_otp_via_email
 from src.utils.usertoken import get_event_token,decode_token_em_email,decode_token_em_id
-
+from config import sender_email,email_password
 
 user_log = APIRouter()
 db = SessionLocal()
@@ -151,9 +151,9 @@ def generate_otp_for_user(email: str):
     db.commit()
 
     # Send OTP via email
-    sender_email = "jenistalaviya404@gmail.com"
+    
     receiver_email = email
-    email_password = "zghoimvlnpzerzkv"
+    
     success, message = send_otp_via_email(sender_email, receiver_email, email_password, otp_code)
 
     if not success:

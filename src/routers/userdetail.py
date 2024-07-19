@@ -14,6 +14,7 @@ import uuid
 from datetime import datetime,timedelta
 from src.utils.usertoken import get_event_token,decode_token_em_email,decode_token_em_id
 from logs.log_config import logger
+from config import email_password,sender_email
 
 
 event = APIRouter()
@@ -1392,9 +1393,7 @@ def make_payment(payment_request: Payments):
 
     logger.info("sent message through mail")
     success, message = send_email(
-        sender_email="jenistalaviya404@gmail.com",
         receiver_email=user.email,
-        password="zghoimvlnpzerzkv",
         transaction_id=payment.transaction_id
     )
 
@@ -1408,6 +1407,6 @@ def make_payment(payment_request: Payments):
 
 
 @event.get("/get_token_event")
-def encode_token(id: str,email: str):
+def encode_token(id: str):
     access_token = get_event_token(id)
     return access_token
